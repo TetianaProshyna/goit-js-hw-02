@@ -1,9 +1,5 @@
 const formatString = function (string) {
-  if (string.length <= 40) {
-    return string;
-  }
-  let stringFormated = string.substr(0, 40).concat('...');
-  return stringFormated;
+  return string.length <= 40 ? string : string.substr(0, 40).concat('...');
 };
 
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
